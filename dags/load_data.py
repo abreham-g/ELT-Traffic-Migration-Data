@@ -12,10 +12,18 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
 
+postgres_user = 'dbtuser'
+postgres_password = 'pssd'
+postgres_host = 'postgres-db'
+postgres_db_name = 'analytics'
+postgres_port = 5432
 
-def load():
-    engine = create_engine('postgresql://postgres:mypass@localhost:5433/adludio')
-    deals_data.to_sql("sales_table", engine)
+
+def load_to_postgres(mysql_df, table_name):
+    mysql_df.columns= mysql_df.columns.str.lower()
+    conn_str = f'postgresql+psycopg2://{postgres_user}:{postgres_password}@{postgres_host}:{postgres_port}/{postgres_db_name}'
+    engine = create_engine(conn_str)
+    mysql_df.to_sql(table_name.lower(), con=engine, index=False, if_exists='append')
 
 
 default_args = {
@@ -34,7 +42,7 @@ with DAG(
     catchup=False,
     
 ) as dag:
-reate_table_sql_query = """ 
+create_table_sql_query = """ 
    create table if not exists open_traffic (
                 id serial,
                 track_id integer,
@@ -59,7 +67,7 @@ create_table = PostgresOperator(
 load_task = PythonOperator(
     task_id='load_file_to_data_lake',
     provide_context=True,
-    python_callable=load,
+    python_callable=load_to_postgres,
     dag=dag
 )
 
