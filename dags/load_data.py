@@ -2,26 +2,24 @@
 #Importing libraries
 import airflow import DAG
 from datetime import datetime, timedelta
-
 from airflow.operators.bash_operator import bash_operator
 from airflow.operators.python_operator import python_operator
 from airflow.operators.mysql_operator import MySqlOperator
-# instantiating the Postgres Operaton 
 import pandas as pd
 import psycopg2 as db
 from sqlalchemy import create_engine
 from elasticsearch import Elasticsearch
 
 
-postgres_user = 'dbtuser'
-postgres_password = 'Abrilow13'
+postgres_user = 'abresh'
+postgres_password = '******'
 postgres_host = 'localhost'
 postgres_db_name = 'analytics'
 postgres_port = 5432
 
 
-def load_to_postgres(mysql_df, table_name):
-    mysql_df.columns= mysql_df.columns.str.lower()
+def load_to_postgres(table_name):
+    mysql_df =  pd.read_csv('../Data/20181024_d1_0830_0900.csv')
     conn_str = f'postgresql+psycopg2://{postgres_user}:{postgres_password}@{postgres_host}:{postgres_port}/{postgres_db_name}'
     engine = create_engine(conn_str)
     mysql_df.to_sql(table_name.lower(), con=engine, index=False, if_exists='append')
@@ -68,6 +66,7 @@ create_table = PostgresOperator(
     sql = create_table_sql_query,
     task_id = "create_table_task",
     postgres_conn_id = "postgres_local",
+    op_kwargs={'table_name': 'open_traffic'}
     dag = dag_psql
     )
 
@@ -85,4 +84,4 @@ clean_task = BashOperator(
 )
 
 #seting up dependencies 
- create_table >> load_task>>clean_task 
+ create_table >> load_task >> clean_task 
