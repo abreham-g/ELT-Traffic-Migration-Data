@@ -6,15 +6,16 @@ from datetime import datetime, timedelta
 from airflow.operators.bash_operator import bash_operator
 from airflow.operators.python_operator import python_operator
 from airflow.operators.mysql_operator import MySqlOperator
-# instantiating the Postgres Operator
-from airflow.providers.postgres.operators.postgres import PostgresOperator
+# instantiating the Postgres Operaton 
 import pandas as pd
-import psycopg2
+import psycopg2 as db
 from sqlalchemy import create_engine
+from elasticsearch import Elasticsearch
+
 
 postgres_user = 'dbtuser'
-postgres_password = 'pssd'
-postgres_host = 'postgres-db'
+postgres_password = 'Abrilow13'
+postgres_host = 'localhost'
 postgres_db_name = 'analytics'
 postgres_port = 5432
 
@@ -26,6 +27,7 @@ def load_to_postgres(mysql_df, table_name):
     mysql_df.to_sql(table_name.lower(), con=engine, index=False, if_exists='append')
 
 
+# default argument 
 default_args = {
     "owener":"airflow",
     'start_date': airflow.utils.dates.days_ago(2),
@@ -35,6 +37,8 @@ default_args = {
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
+#instansiating Dag
+
 with DAG(
     dag_id ="Workflow", 
     default_args=default_args,
@@ -42,6 +46,9 @@ with DAG(
     catchup=False,
     
 ) as dag:
+
+# Tasks
+
 create_table_sql_query = """ 
    create table if not exists open_traffic (
                 id serial,
@@ -77,5 +84,5 @@ clean_task = BashOperator(
     dag=dag
 )
 
-
- create_table >> Insert_data >>clean_task 
+#seting up dependencies 
+ create_table >> load_task>>clean_task 
