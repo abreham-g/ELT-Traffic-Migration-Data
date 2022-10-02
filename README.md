@@ -15,7 +15,7 @@
   <p align="center">
     A fully dockerized ELT pipeline project, using Postgres, MYSQL, dbt, Apache Airflow,  Redash and Superset.
     <br />
-    <a href="https://sensor-data-elt.herokuapp.com/index.html#!/overview"><strong>Explore the docs »</strong></a>
+    <!-- <a href="https://sensor-data-elt.herokuapp.com/index.html#!/overview"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
     <a href="https://github.com/abreham-g/ELT-Traffic-Migration-Data">View Demo</a>
