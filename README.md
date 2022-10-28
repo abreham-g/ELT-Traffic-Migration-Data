@@ -126,7 +126,7 @@ Abreham Gessesse - Aynuyeabresh@gmail.com
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/DiyeMark/Traffic-ELT.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/abreham-g/ELT-Traffic-Migration-Data.svg?style=for-the-badge
 [contributors-url]: https://github.com/DiyeMark/Traffic-ELT/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/DiyeMark/Traffic-ELT.svg?style=for-the-badge
 [forks-url]: https://img.shields.io/github/forks/DiyeMark/Traffic-ELT?style=for-the-badge
