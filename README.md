@@ -76,7 +76,7 @@ Make sure you have docker installed on local machine.
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/DiyeMark/Traffic-ELT-Migration.git
+    git clone https://github.com/abreham-g/ELT-Traffic-Migration-Data.git
     ```
 2. Navigate to the folder
     ```sh
