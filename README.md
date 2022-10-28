@@ -21,9 +21,9 @@
     <a href="https://open-traffic-dbt-doc.netlify.app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/DiyeMark/Traffic-ELT/issues">Report Bug</a>
+    <a href="https://github.com/abreham-g/Traffic-ELT/issues">Report Bug</a>
     ·
-    <a href="https://github.com/DiyeMark/Traffic-ELT/issues">Request Feature</a>
+    <a href="https://github.com/abreham-g/Traffic-ELT/issues">Request Feature</a>
   </p>
 </div>
 
