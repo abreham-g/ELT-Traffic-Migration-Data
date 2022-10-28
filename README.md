@@ -80,8 +80,9 @@ Make sure you have docker installed on local machine.
     ```
 2. Navigate to the folder
     ```sh
-    cd Traffic-ELT-Migration
+    cd ELT-Traffic-Migration-Data
     ```
+    
 3. Build an airflow image
     ```sh
     docker build . --tag apache_dbt/airflow:2.3.3
