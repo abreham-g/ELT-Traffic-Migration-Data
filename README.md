@@ -18,7 +18,7 @@
   <p align="center">
     A dockerized ELT Migration pipeline.
     <br />
-    <a href="https://open-traffic-dbt-doc.netlify.app"><strong>Explore the docs »</strong></a>
+    <a href="#"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/abreham-g/Traffic-ELT/issues">Report Bug</a>
