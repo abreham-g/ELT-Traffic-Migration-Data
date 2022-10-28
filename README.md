@@ -128,13 +128,13 @@ Abreham Gessesse - Aynuyeabresh@gmail.com
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/abreham-g/ELT-Traffic-Migration-Data.svg?style=for-the-badge
 [contributors-url]: https://github.com/abreham-g/ELT-Traffic-Migration-Data/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/DiyeMark/Traffic-ELT.svg?style=for-the-badge
-[forks-url]: https://img.shields.io/github/forks/DiyeMark/Traffic-ELT?style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/DiyeMark/Traffic-ELT?style=for-the-badge
-[stars-url]: https://github.com/DiyeMark/Traffic-ELT/stargazers
+[forks-shield]: https://img.shields.io/github/forks/abreham-g/ELT-Traffic-Migration-Data.svg?style=for-the-badge
+[forks-url]: https://img.shields.io/github/forks/abreham-g/ELT-Traffic-Migration-Data?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/abreham-g/ELT-Traffic-Migration-Data?style=for-the-badge
+[stars-url]: https://github.com/abreham-g/ELT-Traffic-Migration-Data/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://img.shields.io/github/issues/DiyeMark/Traffic-ELT?style=for-the-badge
-[license-shield]: https://img.shields.io/github/license/DiyeMark/Traffic-ELT?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/abreham-g/ELT-Traffic-Migration-Data?style=for-the-badge
 [license-url]: https://github.com/DiyeMark/Traffic-ELT/blob/main/LICENSE
 [Postgresql.com]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
 [Postgresql-url]: https://www.postgresql.org/
